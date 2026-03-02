@@ -19,9 +19,8 @@ Hátrány:
 
 
 0.b
-Színés -[k: Karakter]-> Film
-Karakter -[sz: Színész]-> Film
-Színész -[f: Film]-> Karakter
+Személy <-[Játszik]- Játék -[Szerepel]-> [Film]
+Játék -[Kit]-> Character
 
 Így lehet ugyanaz a karakter több filmben is és lehet önálló tulajdonsága is
 A gráf viszont sokkal komplexebb lesz
