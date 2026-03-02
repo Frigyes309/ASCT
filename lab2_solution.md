@@ -3,7 +3,6 @@ list_property
 Előnyök:
  - Kevesebb csomópont és kapcsolat kell
  - Kisebb tárhelyigény
- - Gyorssabb lekérdezés
 
 Hátrány:
  - Lassú
@@ -20,8 +19,9 @@ Hátrány:
 
 
 0.b
-Színés -[sz: Szerep]-> Film
-Színés -[]-> Szerep -[]-> Film
+Színés -[k: Karakter]-> Film
+Karakter -[sz: Színész]-> Film
+Színész -[f: Film]-> Karakter
 
 Így lehet ugyanaz a karakter több filmben is és lehet önálló tulajdonsága is
 A gráf viszont sokkal komplexebb lesz
@@ -94,24 +94,24 @@ WITH m, count(a) AS count
 RETURN min(count) AS min, avg(count) AS count, max(count) AS max;
 
 ACTED_IN
-0
-0.7764...
+1
+3.9674...
 19
 
 DIRECTED
 0
-0.2094...
-11
+1.0704...
+6
 
 WROTE
 0
-0.3277...
-15
+1.675...
+6
 
 PRODUCED
 0
-0.3406...
-22
+1.7409...
+5
 
 2.c
 Property graph:
